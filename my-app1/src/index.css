@@ -1,0 +1,22 @@
+
+body{
+  background-color: rgb(113, 154, 160);
+}
+
+textarea{
+  background-color: rgb(191, 183, 192);
+  width: 300px;
+  height: 250px;
+  margin-left:450px;
+   border-radius: 5px;
+   border-color: black;
+}
+button{
+  background-color: rgb(183, 191, 189);
+  margin-left:520px;
+  padding:10px;
+  border-radius:4px;
+}
+::placeholder{
+  color:black
+}
