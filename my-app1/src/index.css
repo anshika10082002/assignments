@@ -2,3 +2,13 @@
 body{
   background-color: rgb(113, 154, 160);
 }
+.counter{
+  font-size: large;
+   
+}
+button{
+  background-color: azure;
+  margin: 5px;
+  border-radius: 3px;
+
+}

@@ -1,57 +1,57 @@
-import React from "react";
+import React from "react"; //,{useState}
 import "./index.css";
 
-class Form extends React.Component {
-    constructor(){
+
+//using function component
+// const Counter =()=> {
+//    const[increaseCount,setIncreaseCount]= useState(0)
+//    const[decreaseCount,setDecreaseCount]= useState(100)  
+
+
+//    return (
+//     <div>
+//       <h1>Simple Counter</h1>
+//       <button onClick={()=>setIncreaseCount(increaseCount +1)}>Increase Count-{increaseCount} </button>
+//       <button onClick={()=>setDecreaseCount(decreaseCount -1)}>Decrease Count-{decreaseCount} </button>
+//     </div>
+//    )
+// }
+
+// Using class component
+
+class SimpleCounter extends React.Component{
+  constructor(){
     super()
-        this.state={
-         fname:'',
-         lname:''
-         
-        }
+    this.state={
+      count:0
     }
+  }
+  increaseCounter(){
+    this.setState({
+      count:this.state.count +1
+    })
+  }
+  decreaseCounter(){
+    this.setState({
+      count:this.state.count -1
+    })
+  }
 
-    render(){
-      return (
-      <div>
-            <form>
-              <label for="fname">First Name</label>
-              <br/>
-              <input type="text" 
-              value={this.state.fname}
-               onChange={(event)=>this.state({fname:event.target.value})}/><br/>
-              <label for="lname">Last Name</label>
-              <br/>
-              <input type="text"
-              value={this.state.lname}
-              onChange={(event)=>this.state({lname:event.target.value})}
-              /><br/>
-              <label for="gender">Gender</label>
-              <br/>
-              <input type="radio"/>Male<br/>
-              <input type="radio"/>Female<br/>
+  render(){
+    return (
+      <div className="counter">
+      <p>Count-     {this.state.count}</p>
+      <button onClick ={() => {
+        this.increaseCounter()
+              }}> Increase </button>
 
-              <label for="country">Country</label><br/>
-              <select>
-                <option>India</option>
-                <option>America</option>
-                <option>Australia</option>
-                <option>Canada</option>
-                <option>Korea</option>
-              </select>
-             </form>
-             <br/>
-             <button
-             onClick={() => {
-                this.setState({
-                  
-                });
-              }}
-             >Submit</button>
-           
-        </div>)
-    }
+      <button onClick ={() => {
+        this.decreaseCounter()
+      }}> Decrease </button>
+      </div>
+    )
+  }
 }
 
-export default  Form ;
-  
+//export default Counter,
+export default SimpleCounter
