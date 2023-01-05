@@ -6,42 +6,46 @@ class Form extends React.Component {
     super()
         this.state={
          fname:'',
-         lname:''
+         lname:'',
          
         }
     }
-
+ 
     render(){
       return (
-      <div>
-            <form>
-              <label for="fname">First Name</label>
+      <div  className="container">
+            <form onSubmit={(event)=>{event.preventDefault()}}>
+              <label >First Name :-</label>
               <br/>
               <input type="text" 
               value={this.state.fname}
-               onChange={(event)=>this.state({fname:event.target.value})}/><br/>
-              <label for="lname">Last Name</label>
+               onChange={(event)=>this.state({fname:event.target.value})}/><br/><br/>
+
+              <label>Last Name :-</label>
               <br/>
               <input type="text"
               value={this.state.lname}
               onChange={(event)=>this.state({lname:event.target.value})}
-              /><br/>
-              <label for="gender">Gender</label>
+              /><br/><br/>
+
+              <label>Gender :-</label>
               <br/>
               <input type="radio"/>Male<br/>
-              <input type="radio"/>Female<br/>
+              <input type="radio"/>Female<br/><br/>
 
-              <label for="country">Country</label><br/>
+              <label>Country :-</label>
               <select>
                 <option>India</option>
                 <option>America</option>
                 <option>Australia</option>
                 <option>Canada</option>
                 <option>Korea</option>
-              </select>
+              </select><br/><br/>
+              <label>Upload Image :-</label>
+              <input type="file"/><br/>
              </form>
              <br/>
-             <button
+             <button type="submit"
              onClick={() => {
                 this.setState({
                   
