@@ -7,31 +7,48 @@ class Form extends React.Component {
         this.state={
          fname:'',
          lname:'',
+         email:'',
+         showData:false
          
         }
     }
- 
+    handleFormSubmit(event){
+      event.preventDefault()
+      
+      alert("submitted")
+
+      this.setState({showData:true})
+    }
+    
+
     render(){
       return (
       <div  className="container">
-            <form onSubmit={(event)=>{event.preventDefault()}}>
+            <form onSubmit={(event)=>this.handleFormSubmit(event)}>
               <label >First Name :-</label>
               <br/>
               <input type="text" 
               value={this.state.fname}
-               onChange={(event)=>this.state({fname:event.target.value})}/><br/><br/>
+               onChange={(event)=>this.setState({fname:event.target.value})}/><br/><br/>
 
               <label>Last Name :-</label>
               <br/>
               <input type="text"
               value={this.state.lname}
-              onChange={(event)=>this.state({lname:event.target.value})}
+              onChange={(event)=>this.setState({lname:event.target.value})}
+              /><br/><br/>
+
+              <label>Email :-</label>
+              <br/>
+              <input type="email"
+              value={this.state.email}
+              onChange={(event)=>this.setState({email:event.target.value})}
               /><br/><br/>
 
               <label>Gender :-</label>
               <br/>
-              <input type="radio"/>Male<br/>
-              <input type="radio"/>Female<br/><br/>
+              <input type="radio" name="gender" required/>Male<br/>
+              <input type="radio" name="gender"/>Female<br/><br/>
 
               <label>Country :-</label>
               <select>
@@ -41,17 +58,14 @@ class Form extends React.Component {
                 <option>Canada</option>
                 <option>Korea</option>
               </select><br/><br/>
+
               <label>Upload Image :-</label>
-              <input type="file"/><br/>
+               <input type="file"/><br/>
+              <br/>
+             <button type="submit">Submit</button>
              </form>
-             <br/>
-             <button type="submit"
-             onClick={() => {
-                this.setState({
-                  
-                });
-              }}
-             >Submit</button>
+            {this.state.showData && console.log(this.state.fname,this.state.lname, this.state.email)}
+            
            
         </div>)
     }
