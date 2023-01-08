@@ -1,0 +1,34 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+.nav{
+    background-color: black;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 6px;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+.home{
+  font-size: 2rem;
+  padding: 3px;
+}
+.signUp{
+    font-size: 1.4rem;
+}
+.login{
+    font-size: 1.4rem;
+}
+.nav a{
+    color: antiquewhite;
+    text-decoration: none;
+}

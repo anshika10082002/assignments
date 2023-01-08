@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import  Form from "./App"
+import App from './App'
+import './style.css';
+import {BrowserRouter} from 'react-router-dom'
 
 
 
@@ -10,8 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Form/>
-  
+    <BrowserRouter>
+  <App/>
+    </BrowserRouter> 
   </React.StrictMode>
 );
 
