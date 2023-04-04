@@ -2,13 +2,16 @@
 body{
   background-color: rgb(113, 154, 160);
 }
-.counter{
-  font-size: large;
-   
+
+.container{
+display: block;
+text-align: center;
+margin-top: 20px;
+
 }
-button{
-  background-color: azure;
-  margin: 5px;
-  border-radius: 3px;
+
+.table{
+  margin: 0 auto;
+  align-items: center;
 
 }
