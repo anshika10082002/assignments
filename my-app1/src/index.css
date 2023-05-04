@@ -1,17 +1,82 @@
+/**InvoiceForm CSS*/
 
-body{
-  background-color: rgb(113, 154, 160);
-}
-
-.container{
-display: block;
-text-align: center;
-margin-top: 20px;
+.main{
+  background-color: #a9dfaa;
+  border:2px solid rgb(72, 70, 70);
+  border-radius: 5px;
 
 }
-
-.table{
-  margin: 0 auto;
+h2{
+  flex-direction: column;
   align-items: center;
+  display: flex;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
 
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  background-color: #67b469;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/*invoiceGrid*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
